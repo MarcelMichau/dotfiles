@@ -1,5 +1,3 @@
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\atomic.custom.omp.json" | Invoke-Expression
-
 Import-Module PSReadLine
 Import-Module -Name Terminal-Icons
 
@@ -24,3 +22,5 @@ $scriptblock = {
 Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock $scriptblock
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\atomic.custom.omp.json" | Invoke-Expression
